@@ -1,6 +1,11 @@
 *{/*для всех элементов*/
     box-sizing: border-box;
 }
+
+.body{
+    font-family: 'Roboto', sans-serif;
+    padding-top: 44px;/*внутренний отсуп*/
+}
 .container{
    /* border: 1px solid red;*/
     max-width: 1200px;
@@ -11,20 +16,25 @@
     display: flex;/*все элементы выстраиваются в строку*/
     align-items: center;/*элементы относительно друг друга должны стоять по центу*/
     justify-content: space-between;/*раскидай контент так чтобы между ними было равное расстояние*/
+    /* margin-top: 44px; */
+    margin-bottom: 40px;
 }
 
-.search-input{
+.input{
     background: #FFFFFF;
     border: 1px solid #D9D9D9;
     border-radius: 2px;
-    height: 40px;
-    width: 690px;
     font-size: 16px;/*размер шрифта внутри поля*/
     line-height: 24px;/*высота строки*/
-    background-image: url(../img/home.svg);
+    padding: 8px;
+    padding-left: 35px;
     background-repeat: no-repeat;
     background-position: left 11px center;
-    padding-left: 35px;
+}
+.address-input{
+    /* height: 40px; */
+    width: 690px;
+    background-image: url(../img/home.svg);
 }
 
 .buttons{
@@ -61,4 +71,152 @@
 /* .button-text{
     vertical-align: middle;/*текст и иконка в кнопке выровнялись относительно друг друга*/
 /*} */
+
+.promo{
+    box-shadow: 0px 7px 12px rgba(158, 158, 163, 0.1);
+    /* background: #FFF1B8 url(../img/promo-image.png);
+    background-repeat:no-repeat;
+    background-position: top right -200px; */
+    background: #FFF1B8 url(../img/promo-image1.png) no-repeat top 50px right -100px/800px;
+    border-radius: 10px;
+    padding:68px 70px; 
+    margin-bottom: 56px;
+}
+
+.promo-title{
+    font-weight: bold;
+    font-size: 39px;
+    line-height: 46px;
+    color: #302C34;
+    /* padding-bottom: 16px; */
+}
+
+.promo-text{
+    max-width: 538px;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 28px;
+    color: #302C34;
+}
+
+.input-search{
+    background-image: url(../img/search.svg);
+    width: 300px;
+} 
+
+.section-heading{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 44px;
+}
+
+.section-title{
+    margin: 0;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+    color: #000000;
+}
+
+.cards{
+    display:flex;
+    align-items: flex-start;
+    flex-wrap: wrap;/*если карточки не помещаются, будут переноситься на новую строчку*/
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.card{
+    background: #FFFFFF;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 7px;
+    overflow: hidden;/*скрывает всё, что вылазит за параметры карточки*/
+    margin-bottom: 30px;
+}
+
+.card-image{
+    width: 384px;
+    height: 250px;
+    object-fit: cover;/*чтобы картинка сама обрезалась*/
+   justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.card-text{
+    padding-top: 20px;
+    padding-bottom: 35px;
+    padding-left: 23px;
+    padding-right: 23px;
+}
+
+.card-heading{
+    display: flex;
+    align-items: center;/*элементы относительно друг друга должны быть по центру*/
+    justify-content: space-between;/*относительно друг друга по ширине должны раскидываться*/
+    margin-bottom:44px;
+}
+
+.card-title{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    color: #000000;
+    margin:0;
+    }
+
+.card-tag{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    background:#262626;
+    border-radius: 2px ;
+    padding:1px 8px;
+}
+
+.card-info{
+    display:flex;
+    align-items:center;
+}
+
+.raiting{
+   margin-right: 26px;
+   color: #FFC107;
+   font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 32px;
+}
+
+.price, .catagory{
+    color: #8C8C8C;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 32px;
+}
+
+.price{
+    margin-right: 10px;
+}
+
+.price:after{
+    content:"";
+    width: 5px;
+    height: 5px;
+    background-color: #8C8C8C;
+    display: inline-block;/*строчно блочный элемент,чтобы он появился*/
+    vertical-align: middle;/*чтобы ровно по-середине*/
+    border-radius: 50%;/*скругление*/
+    margin-left:10px;/*двигаем относительно левого края*/
+}
+
+
 
