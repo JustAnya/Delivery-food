@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PizzaBurger - доставка еды на дом!</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap&subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css"/>
+    <link rel="stylesheet" href="css/animate.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
     <div class="container">
         <header class="header">
             <a href="index.html">
-                <img src="img\logo.svg" alt="logo" class="logo">
+                <img src="img\logo.svg" alt="logo" class="logo animated bounce">
             </a>
              <input type="text" class="input address-input" placeholder="Адрес доставки">
              <div class="buttons">
@@ -20,7 +21,7 @@
                     <img src="img/user.svg" alt="user" class="button-icon"> 
                    <span class="button-text">Войти</span> 
                 </button>
-                 <button class="button">
+                 <button class="button" id="cart-button">
                     <img src="img/shopping-cart.svg" alt="shopping-cart" class="button-icon"> 
                     <span class="button-text">Корзина</span>
                     </button>
@@ -42,7 +43,7 @@
                         </div>
                     </div>
                     <div class="cards">
-                        <div class="card">
+                        <div class="card animated fadeInUp">
                             <img src="img/suchi1.jpg" alt="image" class="card-image">
                             <div class="card-text">
                                 <div class="card-heading">
@@ -101,7 +102,7 @@
                                     </div>
                                 </div>
     
-                            <div class="card">
+                            <div class="card wow fadeInUp " data-wow-delay="0.2s">
                                 <img src="img/suchi4.jpg" alt="image" class="card-image">
                                 <div class="card-text">
                                     <div class="card-heading">
@@ -120,7 +121,7 @@
                                     </div>
                                 </div>
     
-                            <div class="card">
+                            <div class="card wow fadeInUp " data-wow-delay="0.4s">
                                 <img src="img/suchi5.jpg" alt="image" class="card-image">
                                 <div class="card-text">
                                     <div class="card-heading">
@@ -139,7 +140,7 @@
                                     </div>
                             </div>
 
-                            <div class="card">
+                            <div class="card wow fadeInUp" data-wow-delay="0.6s">
                                 <img src="img/suchi6.jpg" alt="image" class="card-image">
                                 <div class="card-text">
                                     <div class="card-heading">
@@ -181,5 +182,69 @@
             </div>
         </div>
     </footer>
+    <div class="modal">/
+<div class="modal-dialog">
+    <div class="model-header">
+        <h3 class="modal-title">Корзина</h3>
+        <button class="close">&times;</button>
+    </div>
+    <div class="model-body">
+        <div class="food-row">
+            <span class="food-name">Ролл угорь стандарт </span>
+                <strong class="food-price">250 ₽</strong>
+                <div class="food-counter">
+                    <button class="counter-button">-</button>
+                    <span class="counter">1</span>
+                    <button class="counter-button">+</button>
+                </div>
+        </div>
+        <div class="food-row">
+            <span class="food-name">Ролл угорь стандарт </span>
+                <strong class="food-price">250 ₽</strong>
+                <div class="food-counter">
+                    <button class="counter-button">-</button>
+                    <span class="counter">1</span>
+                    <button class="counter-button">+</button>
+                </div>
+        </div>
+        <div class="food-row">
+            <span class="food-name">Ролл угорь стандарт </span>
+                <strong class="food-price">250 ₽</strong>
+                <div class="food-counter">
+                    <button class="counter-button">-</button>
+                    <span class="counter">1</span>
+                    <button class="counter-button">+</button>
+                </div>
+        </div>
+        <div class="food-row">
+            <span class="food-name">Ролл угорь стандарт </span>
+                <strong class="food-price">250 ₽</strong>
+                <div class="food-counter">
+                    <button class="counter-button">-</button>
+                    <span class="counter">1</span>
+                    <button class="counter-button">+</button>
+                </div>
+        </div>
+        <div class="food-row">
+            <span class="food-name">Ролл угорь стандарт </span>
+                <strong class="food-price">250 ₽</strong>
+                <div class="food-counter">
+                    <button class="counter-button">-</button>
+                    <span class="counter">1</span>
+                    <button class="counter-button">+</button>
+                </div>
+        </div>
+        <div class="modal-footer">
+            <span class="pricetag">1250 ₽</span>
+            <div class='footer-button'>
+                <button class="button button-primary">Оформить заказ</button>
+                <button class="button">Отмена</button>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+    <script src="js/wow.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
