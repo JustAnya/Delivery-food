@@ -65,6 +65,11 @@
     margin-right: 10px;
 }
 
+.button-card-text{
+    margin-right: 10px;
+}
+
+
 .button-icon{
     margin-right: 6px;/*оотодвинули текст вправо от иконки*/
     /* vertical-align: middle;иконка выравнивается */
@@ -105,6 +110,7 @@
 .input-search{
     background-image: url(../img/search.svg);
     width: 300px;
+    margin-left: auto;/*!!!!!!!!!!!!!!!!!!!!!!!!можно не дублировать стили*/
 } 
 
 .section-heading{
@@ -114,6 +120,11 @@
     margin-bottom: 44px;
 }
 
+/* .section-heading_r{
+    display:flex;
+    align-items: center;
+    margin-bottom: 44px;
+} */
 .section-title{
     margin: 0;
     font-style: normal;
@@ -122,6 +133,16 @@
     line-height: 42px;
     color: #000000;
 }
+
+/* .section-title_r{
+    margin: 0;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+    color: #000000;
+    margin-right: 30px;
+} */
 
 .cards{
     display:flex;
@@ -139,6 +160,7 @@
     margin-bottom: 30px;
     /* max-width: 385px; использовалось для фиксированного макета, для адаптива лучше свойство ниже*/
     flex-basis:30%;
+    text-decoration: none;
 }
 
 .card-image{
@@ -172,6 +194,12 @@
     margin:0;
     }
 
+.card-title-reg{
+    font-style: normal;
+    font-weight: 400;
+}
+
+
 .card-tag{
     font-style: normal;
     font-weight: normal;
@@ -191,7 +219,22 @@
     flex-wrap: wrap;/*!!!!!!!!!!!!!!!!!!!!*/
 }
 
-.raiting{
+.card-buttons{
+    display: flex;
+    align-items: center;
+    margin-top:24px;
+}
+
+.card-price-bold{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 32px;
+    color: #000000;
+    margin-left: 30px;
+}
+
+ .raiting{
    margin-right: 26px;
    color: #FFC107;
    font-style: normal;
@@ -229,6 +272,15 @@
     vertical-align: middle;/*чтобы ровно по-середине*/
     border-radius: 50%;/*скругление*/
     margin-left:10px;/*двигаем относительно левого края*/
+}
+
+.ingridiens{
+    
+    color: #8C8C8C;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 32px;
 }
 
 .main{
@@ -324,7 +376,7 @@
 
 }
 
-@media (max-width:758px){
+@media (max-width:768px){
     .container{
         max-width: 560px;
     }
@@ -333,7 +385,7 @@
         flex-wrap:wrap;/*возможность переносить тест на новую строку*/
     }
 
-    .raiting{
+    .card .raiting{/*это должно быть именно внутри кард рейтинг*/
         flex-basis:100%
     }
 
