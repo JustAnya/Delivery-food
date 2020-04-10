@@ -163,13 +163,15 @@
     text-decoration: none;
 }
 
-.card-image{
+ .card-image{
     width: 384px;
     height: 250px;
     object-fit: cover;/*чтобы картинка сама обрезалась*/
-   justify-content: space-between;
+    justify-content: space-between;
     margin-bottom: 30px;
-}
+} 
+
+
 
 .card-text{
     padding-top: 20px;
