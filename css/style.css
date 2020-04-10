@@ -324,7 +324,7 @@
 
 }
 
-@madia(max-width:758px){
+@media (max-width:758px){
     .container{
         max-width: 560px;
     }
