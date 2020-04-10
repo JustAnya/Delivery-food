@@ -10,6 +10,7 @@
    /* border: 1px solid red;*/
     max-width: 1200px;
     margin: auto; /*чтобы контейнер был всегда по середине, одинаковые отступы по бокам */
+    margin-top: 44px;
 }
 
 .header{
@@ -216,6 +217,49 @@
     vertical-align: middle;/*чтобы ровно по-середине*/
     border-radius: 50%;/*скругление*/
     margin-left:10px;/*двигаем относительно левого края*/
+}
+
+.main{
+    background: linear-gradient(180deg, rgba(245, 245, 245, 0) 1.04%, #F5F5F5 100%);
+}
+
+.footer{
+    padding: 60px 0;/*внутренний отступ сверху и снизу 60 пх. слева и српава ноль*/
+}
+
+.footer-block{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-nav{
+    margin-left:35px;
+    margin-right:auto;
+}
+
+.footer-link{
+    display: inline-block;
+    color: #595959;
+    text-decoration: none;/*избавляемся от подчёркивания ссылок*/
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.footer-link:not(:last-child){/*для всех элементов футер-лин кроме последнего*/
+    margin-right: 15px;
+}
+
+.social-link{
+    display: flex;
+    align-items: center;
+    display: inline-block;
+}
+
+.social-link:not(:last-child){
+    margin-right:31px;
 }
 
 
