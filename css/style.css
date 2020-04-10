@@ -34,7 +34,8 @@
 }
 .address-input{
     /* height: 40px; */
-    width: 690px;
+    /* width: 690px;  для фиксированного размера поля использовалось, но с адаптивом лучше использовать свойство ниже*/
+    flex:0.8;/*занимает 80% от свободного места не зависимо от размера экрана*/
     background-image: url(../img/home.svg);
 }
 
@@ -78,7 +79,7 @@
     /* background: #FFF1B8 url(../img/promo-image.png);
     background-repeat:no-repeat;
     background-position: top right -200px; */
-    background: #FFF1B8 url(../img/promo-image1.png) no-repeat top 50px right -100px/800px;
+    background: #FFF1B8 url(../img/promo-image1.png) no-repeat top 10px right -200px/750px;
     border-radius: 10px;
     padding:68px 70px; 
     margin-bottom: 56px;
@@ -136,6 +137,8 @@
     border-radius: 7px;
     overflow: hidden;/*скрывает всё, что вылазит за параметры карточки*/
     margin-bottom: 30px;
+    /* max-width: 385px; использовалось для фиксированного макета, для адаптива лучше свойство ниже*/
+    flex-basis:30%;
 }
 
 .card-image{
@@ -185,6 +188,7 @@
 .card-info{
     display:flex;
     align-items:center;
+    flex-wrap: wrap;/*!!!!!!!!!!!!!!!!!!!!*/
 }
 
 .raiting{
@@ -206,6 +210,14 @@
 
 .price{
     margin-right: 10px;
+}
+
+.catagory{
+    /*свойство css скрывает часть слишком длинного текса*/
+    text-overflow: ellipsis;
+    overflow: hidden;/*всё, что вылазит за пределы текстового блока скрывается, работает со свойством выше,обязательно*/
+    white-space: nowrap;/*запрет на перенос строки*/
+    max-width: 150px;/*ограничение по ширине*/
 }
 
 .price:after{
@@ -262,5 +274,188 @@
     margin-right:31px;
 }
 
+/* @media(max-width:1200px){ пример медиа запросов для адаптива!!
+    body{
+    background-color: red;
+    }
+} */
+
+@media(max-width:1366px){
+    .container{
+        max-width: 960px;
+    }
+    .promo{
+        background-size: 750px;
+        background-position: center right -300;
+    }
+
+    .raiting{
+        margin-right:15px;
+    }
+    .catagory,
+    .price{
+        font-size:14px;
+    }
+}
+
+@media(max-width:992px){
+    .container{
+        max-width: 750px;
+    }
+
+    .promo{
+        padding:50px;
+        background-size:500px;
+        background-position:center right -200px;
+    }
+
+    .promo-text{
+        font-size: 18px;
+        max-width: 400px;
+    }
+
+    .card{
+        flex-basis:49%;
+    }
+
+    .footer-link{
+        font-size: 16px;
+    }
+
+}
+
+@madia(max-width:758px){
+    .container{
+        max-width: 560px;
+    }
+
+    .card-info{
+        flex-wrap:wrap;/*возможность переносить тест на новую строку*/
+    }
+
+    .raiting{
+        flex-basis:100%
+    }
+
+    .card-title{
+        font-size:18px;
+    }
+
+    .promo-title{
+        font-size: 24px;
+        line-height: 1.4;/*!!!!!!!!!!!!!!!!!!*/
+    }
+
+    .promo{
+        background-size:400px;
+        background-position: bottom 50px right -200px;
+    }
+
+    .promo-text{
+        margin-bottom:0 ;
+    }
+}
+
+@media(max-width:578px){
+    .container{
+        width:90%;
+    }
+
+    .header{
+        flex-wrap:wrap;
+    }
+
+    .address-input{
+        margin-top: 15px;
+        order:5;/*чтобы строка адреса был по счёту последний, чтобы уйти вниз */
+        flex:1;/*растянули элемент на всю ширину*/
+    }
+
+    .promo{
+        background-image:none;
+    }
+
+    .promo-title{
+        margin-bottom: 10px;
+    }
+
+    .section-title{
+        font-size: 20px;
+    }
+
+    .card{
+        flex-basis: 100%;
+    }
+
+    .card-image{
+        max-width:100%;
+    }
+
+    .footer{
+        padding: 30px 0;
+    }
+
+    .footer-block{
+        align-items:flex-start;/*чтобы всё выравнивалось по верхней части*/
+    }
+
+    .footer-nav{
+        order:0;
+        margin-left:0;
+        margin-right: 0;
+        display:flex;
+        flex-direction: column;/*!!!!!!!!!!!!!!!!!!!!!!!!*/
+    }
+
+    .footer-logo{
+        order:1;
+        margin-right: 15px;
+    }
+
+    .footer-link{
+        order:2
+    }
+}
+
+@media(max-width:480px){
+    .button-text{
+        display:none;
+    }
+
+    .button{
+     min-height: 40px;   
+    }
+
+    .button-icon{
+        margin:0;/*отключили отступ у кнопки*/
+    }
+
+    .promo{
+        padding: 20px;/*сократили отступы*/
+    }
+    .section-heading{
+        flex-wrap: wrap;
+    }
+
+    .footer-block{
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items:center;
+    }
+
+    .footer-logo{
+        order:0;
+        margin-bottom: 20px;
+    }
+
+    .footer-nav{
+       margin-bottom: 20px;
+       text-align: center; 
+    }
+
+    .footer-link:not(:last-child){
+        margin-right: 0;
+    }
+}
 
 
