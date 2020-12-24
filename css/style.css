@@ -1,10 +1,10 @@
-*{/*для всех элементов*/
+*{
     box-sizing: border-box;
 }
 
 .body{
     font-family: 'Roboto', sans-serif;
-    padding-top: 44px;/*внутренний отсуп*/
+    padding-top: 44px;
 }
 .container{
    /* border: 1px solid red;*/
@@ -14,9 +14,9 @@
 }
 
 .header{
-    display: flex;/*все элементы выстраиваются в строку*/
+    display: flex;
     align-items: center;/*элементы относительно друг друга должны стоять по центу*/
-    justify-content: space-between;/*раскидай контент так чтобы между ними было равное расстояние*/
+    justify-content: space-between;
     /* margin-top: 44px; */
     margin-bottom: 40px;
 }
@@ -25,8 +25,8 @@
     background: #FFFFFF;
     border: 1px solid #D9D9D9;
     border-radius: 2px;
-    font-size: 16px;/*размер шрифта внутри поля*/
-    line-height: 24px;/*высота строки*/
+    font-size: 16px;
+    line-height: 24px;
     padding: 8px;
     padding-left: 35px;
     background-repeat: no-repeat;
@@ -71,7 +71,7 @@
 
 
 .button-icon{
-    margin-right: 6px;/*оотодвинули текст вправо от иконки*/
+    margin-right: 6px;
     /* vertical-align: middle;иконка выравнивается */
 }
 
@@ -182,8 +182,8 @@
 
 .card-heading{
     display: flex;
-    align-items: center;/*элементы относительно друг друга должны быть по центру*/
-    justify-content: space-between;/*относительно друг друга по ширине должны раскидываться*/
+    align-items: center;
+    justify-content: space-between;
     margin-bottom:44px;
 }
 
@@ -218,7 +218,7 @@
 .card-info{
     display:flex;
     align-items:center;
-    flex-wrap: wrap;/*!!!!!!!!!!!!!!!!!!!!*/
+    flex-wrap: wrap;
 }
 
 .card-buttons{
@@ -270,10 +270,10 @@
     width: 5px;
     height: 5px;
     background-color: #8C8C8C;
-    display: inline-block;/*строчно блочный элемент,чтобы он появился*/
+    display: inline-block;
     vertical-align: middle;/*чтобы ровно по-середине*/
-    border-radius: 50%;/*скругление*/
-    margin-left:10px;/*двигаем относительно левого края*/
+    border-radius: 50%;
+    margin-left:10px;
 }
 
 .ingridiens{
@@ -307,7 +307,7 @@
 .footer-link{
     display: inline-block;
     color: #595959;
-    text-decoration: none;/*избавляемся от подчёркивания ссылок*/
+    text-decoration: none;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -335,7 +335,7 @@
     position:fixed;/*всегда было на экране и не крокручивалось*/
     left:0;/*приклеиваю к верхнему левому углу*/
     top:0;
-    width:100%;/*растягиваю на 100% от родителя тега боду*/
+    width:100%;/*растягиваю на 100% от родителя тега body*/
     height:100%;
     background: rgba(0, 0, 0, 0.4);
     /* display:flex; */
@@ -348,7 +348,6 @@
 .modal-dialog{/*по умолчанию окно будет 95процетов, но не больше чем 780пикселей */
     max-width: 780px;
     width: 95%;
-    /*ниже прописали*/
     /*min-height: 552px;мин высота задана для того чтобы окно могло прокручиваться если контента станет больше и ничего не вываливалось*/
     background: #FFFFFF;
     border-radius: 5px;
@@ -386,9 +385,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-bottom: 8px;/*отсуп снизу*/
-    border-bottom: 1px solid #D9D9D9;/*сплошная рамка снизу*/
-    margin-bottom:15px;/*отступ между строками*/
+    padding-bottom: 8px;
+    border-bottom: 1px solid #D9D9D9;
+    margin-bottom:15px;
 }
 
 .food-name{
@@ -449,12 +448,6 @@
     font-size:20px;
     line-height:23px;
 }
-/**************************************************************************************************************/
-/* @media(max-width:1200px){ пример медиа запросов для адаптива!!
-    body{
-    background-color: red;
-    }
-} */
 
 @media(max-width:1366px){
     .container{
@@ -519,7 +512,7 @@
 
     .promo-title{
         font-size: 24px;
-        line-height: 1.4;/*!!!!!!!!!!!!!!!!!!*/
+        line-height: 1.4;
     }
 
     .promo{
@@ -580,7 +573,7 @@
         margin-left:0;
         margin-right: 0;
         display:flex;
-        flex-direction: column;/*!!!!!!!!!!!!!!!!!!!!!!!!*/
+        flex-direction: column;
     }
 
     .footer-logo{
